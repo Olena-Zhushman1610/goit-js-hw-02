@@ -1,9 +1,6 @@
 function checkForSpam(message) {
   const lowerMessage = message.toLowerCase();
-  const hasSpam =
-    lowerMessage.includes("spam") || lowerMessage.includes("sale");
-
-  return hasSpam ? true : false;
+  return lowerMessage.includes("spam") || lowerMessage.includes("sale");
 }
 
 console.log(checkForSpam("Latest technology news")); // false
@@ -13,8 +10,3 @@ console.log(checkForSpam("Amazing SalE, only tonight!")); // true
 console.log(checkForSpam("Trust me, this is not a spam message")); // true
 console.log(checkForSpam("Get rid of sPaM emails. Our book in on sale!")); // true
 console.log(checkForSpam("[SPAM] How to earn fast money?")); // true
-//або
-/* function checkForSpam(message) {
-  const msg = message.toLowerCase();
-  return msg.includes("spam") || msg.includes("sale");
-} */
